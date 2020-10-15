@@ -1,0 +1,23 @@
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Imagen</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products" [ngClass]="{'discount': product.discount}">
+            <td>{{product.name}}</td>
+            <td>{{product.type}}</td>
+            <td>{{product.price|currency}}</td>
+            <td>
+                <span *ngIf="product.stock == 0; else showStock ">No Hay Stock</span>
+                <ng-template #showStock>{{product.stock}}</ng-template>
+            </td>
+            <td><img [src]="product.image" [alt]="product.name"></td>
+        </tr>
+    </tbody>
+</table>

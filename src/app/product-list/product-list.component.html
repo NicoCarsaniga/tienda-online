@@ -1,3 +1,4 @@
+<h2>Novedades</h2>
 <table>
     <thead>
         <tr>
@@ -6,6 +7,7 @@
             <th>Precio</th>
             <th>Stock</th>
             <th>Imagen</th>
+            <th>Comprar</th>
         </tr>
     </thead>
     <tbody>
@@ -18,6 +20,11 @@
                 <ng-template #showStock>{{product.stock}}</ng-template>
             </td>
             <td><img [src]="product.image" [alt]="product.name"></td>
+            <td>
+                <button (click)="downQuantity(product)">-</button>
+                <input type="number" [(ngModel)]="product.quantity">
+                <button (click)="upQuantity(product)">+</button>
+            </td>
         </tr>
     </tbody>
 </table>

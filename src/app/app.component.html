@@ -6,15 +6,12 @@
 </header>
 <nav>
   <ul>
-    <li>Home</li>
-    <li>Productos</li>
-    <li>Contactos</li>
+    <li><a [routerLink]="['/']">Home</a></li>
+    <li><a [routerLink]="['/about']">Sobre Nosotros</a></li>
+    <li><a [routerLink]="['/contacto']">Contactos</a></li>
   </ul>
 </nav>
 <div>
-  <div>
-    <app-product-list></app-product-list>
-  </div>
-  <div>Div Para el carrito</div>
+  <router-outlet></router-outlet>
 </div>
 <footer>Desarollado por Angry Quokka &copy;</footer>

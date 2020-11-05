@@ -5,14 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
 
+import { FormsModule } from '@angular/forms';
+import { GeekopolisContactComponent } from './geekopolis-contact/geekopolis-contact.component';
+import { GeekopolisShopCartComponent } from './geekopolis-shop-cart/geekopolis-shop-cart.component';
+import { GeekopolisHomeComponent } from './geekopolis-home/geekopolis-home.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent
+    ProductListComponent,
+    GeekopolisContactComponent,
+    GeekopolisShopCartComponent,
+    GeekopolisHomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

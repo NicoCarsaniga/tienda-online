@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { GeekopolisContactComponent } from './geekopolis-contact/geekopolis-contact.component';
 import { GeekopolisShopCartComponent } from './geekopolis-shop-cart/geekopolis-shop-cart.component';
 import { GeekopolisHomeComponent } from './geekopolis-home/geekopolis-home.component';
+import { GeekopolisAboutComponent } from './geekopolis-about/geekopolis-about.component';
+import { InputValueComponent } from './input-value/input-value.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { GeekopolisHomeComponent } from './geekopolis-home/geekopolis-home.compo
     ProductListComponent,
     GeekopolisContactComponent,
     GeekopolisShopCartComponent,
-    GeekopolisHomeComponent
+    GeekopolisHomeComponent,
+    GeekopolisAboutComponent,
+    InputValueComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { GeekopolisAboutComponent } from './geekopolis-about/geekopolis-about.component';
 import { GeekopolisContactComponent } from './geekopolis-contact/geekopolis-contact.component';
 import { GeekopolisHomeComponent } from './geekopolis-home/geekopolis-home.component';
 
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'home',
     component: GeekopolisHomeComponent
+  },
+  {
+    path: 'about',
+    component: GeekopolisAboutComponent
   },
   {
     path: 'contacto',

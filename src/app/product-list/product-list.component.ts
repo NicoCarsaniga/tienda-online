@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductCartService } from '../product-cart.service';
 import { Product } from './Product';
 
 @Component({
@@ -37,18 +38,19 @@ export class ProductListComponent implements OnInit {
     quantity: 0,
   },
 ];
-  constructor() { }
+  
+  constructor(private cart: ProductCartService) { }
 
   ngOnInit(): void {
   }
 
-  upQuantity(product: Product): void{
-    if(product.quantity < product.stock)
-      product.quantity++;
+  addToCart(product): void {
+    this.cart.addToCart(product);
+    product.stock -= product.quantity;
+    product.quantity = 0;
   }
 
-  downQuantity(product: Product): void{
-    if(product.quantity > 0)
-      product.quantity--;
+  msgAlert(m: string){
+    alert(m);
   }
 }

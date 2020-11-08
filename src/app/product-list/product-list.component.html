@@ -17,13 +17,12 @@
             <td>{{product.price|currency}}</td>
             <td>
                 <span *ngIf="product.stock == 0; else showStock ">No Hay Stock</span>
-                <ng-template #showStock>{{product.stock}}</ng-template>
+                <ng-template #showStock>Stock Disponible</ng-template>
             </td>
             <td><img [src]="product.image" [alt]="product.name"></td>
             <td>
-                <button (click)="downQuantity(product)">-</button>
-                <input type="number" [(ngModel)]="product.quantity">
-                <button (click)="upQuantity(product)">+</button>
+                <app-input-value [(value)]="product.quantity" [max]="product.stock" (maxValue)="msgAlert($event)"></app-input-value>
+                <p><button (click)="addToCart(product)">Agregar al Carrito</button></p>
             </td>
         </tr>
     </tbody>

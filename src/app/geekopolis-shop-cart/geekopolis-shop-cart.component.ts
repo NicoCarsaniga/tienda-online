@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { __classPrivateFieldSet } from 'tslib';
 import { ProductCartService } from '../product-cart.service';
+import { Product } from '../product-list/Product';
 
 @Component({
   selector: 'app-geekopolis-shop-cart',
@@ -8,7 +10,11 @@ import { ProductCartService } from '../product-cart.service';
 })
 export class GeekopolisShopCartComponent implements OnInit {
 
-  constructor(private cart: ProductCartService) { }
+  cartList: Product[];
+  constructor(private cart: ProductCartService) { 
+    cart.shopCart.subscribe((observable) => this.cartList = observable);
+    
+  }
 
   ngOnInit(): void {
   }

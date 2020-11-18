@@ -18,6 +18,7 @@ export class ProductCartService {
       this._shopCart.push({...product});
     }else {
       item.quantity += product.quantity;
+      item.price += product.price;
     }
     this.shopCart.next(this._shopCart);
   }

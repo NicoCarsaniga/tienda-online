@@ -16,7 +16,6 @@ export class ProductListComponent implements OnInit {
     price: 250,
     stock: 6,
     image: 'assets/img/onepiecetomo1.jpg',
-    discount: true,
     quantity: 0,
   },
   {
@@ -25,7 +24,6 @@ export class ProductListComponent implements OnInit {
     price: 12000,
     stock: 0,
     image: 'assets/img/tigershot.jpg',
-    discount: false,
     quantity: 0,
   },
   {
@@ -34,7 +32,6 @@ export class ProductListComponent implements OnInit {
     price: 10000,
     stock: 1,
     image: 'assets/img/coleccionElPadrinoFunkPop.jpg',
-    discount: false,
     quantity: 0,
   },
 ];

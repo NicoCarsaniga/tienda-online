@@ -17,7 +17,7 @@ export class InputValueComponent implements OnInit {
   max: number;
 
   @Output()
-  outputValue: EventEmitter<number> = new EventEmitter<number>();
+  valueChange: EventEmitter<number> = new EventEmitter<number>();
 
   @Output()
   maxValue: EventEmitter<string> = new EventEmitter<string>();
@@ -28,7 +28,7 @@ export class InputValueComponent implements OnInit {
   upQuantity(): void{
     if(this.value < this.max){
       this.value++;
-      this.outputValue.emit(this.value);
+      this.valueChange.emit(this.value);
     }
     else{
       this.maxValue.emit("No hay suficiente stock del producto solicitado");
@@ -38,8 +38,10 @@ export class InputValueComponent implements OnInit {
   downQuantity(): void{
     if(this.value > 0){
       this.value--;
-      this.outputValue.emit(this.value);
+      this.valueChange.emit(this.value);
     }
   }
+
+  
 
 }

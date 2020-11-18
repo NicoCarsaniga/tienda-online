@@ -11,7 +11,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let product of products" [ngClass]="{'discount': product.discount}">
+        <tr *ngFor="let product of products">
             <td>{{product.name}}</td>
             <td>{{product.type}}</td>
             <td>{{product.price|currency}}</td>
@@ -22,7 +22,7 @@
             <td><img [src]="product.image" [alt]="product.name"></td>
             <td>
                 <app-input-value [(value)]="product.quantity" [max]="product.stock" (maxValue)="msgAlert($event)"></app-input-value>
-                <p><button (click)="addToCart(product)">Agregar al Carrito</button></p>
+                <button (click)="addToCart(product)">Agregar al Carrito</button>
             </td>
         </tr>
     </tbody>

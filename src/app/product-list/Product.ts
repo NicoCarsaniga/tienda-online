@@ -5,6 +5,5 @@ export interface Product {
     price: number;
     stock: number;
     image: string;
-    discount: boolean;
     quantity: number;
 }

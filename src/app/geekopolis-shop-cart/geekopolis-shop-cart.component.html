@@ -1,4 +1,3 @@
 <h2>Carrito de Compras</h2>
 
-<p *ngFor=" let item of cartList">{{item.name}}, X{{item.quantity}}</p>
-
+<p *ngFor=" let item of cartList"><span *ngIf="item.quantity != 0">{{item.name}}, X{{item.quantity}}</span></p>
